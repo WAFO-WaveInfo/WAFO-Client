@@ -9,19 +9,19 @@ import 'package:wafo/ui/shorts/shorts_screen.dart';
 
 const bottomNavigationBarItemList = [
   {
-    'label': '홈',
+    'label': 'Home',
     'iconPath': 'assets/svg/home.svg',
   },
   {
-    'label': '폴더',
+    'label': 'Folder',
     'iconPath': 'assets/svg/folderBig.svg',
   },
   {
-    'label': '숏츠',
+    'label': 'Shorts',
     'iconPath': 'assets/svg/shorts.svg',
   },
   {
-    'label': '프로필',
+    'label': 'Profile',
     'iconPath': 'assets/svg/profile.svg',
   },
 ];
@@ -84,52 +84,59 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 4.0),
-          child: BottomNavigationBar(
-            elevation: 0,
-            backgroundColor: commonWhiteColor,
-            selectedItemColor: primaryColor,
-            unselectedItemColor: greyACACAC,
-            selectedFontSize: 12,
-            selectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.w500,
+          child: Theme(
+            data: ThemeData(
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
             ),
-            unselectedFontSize: 12,
-            type: BottomNavigationBarType.fixed,
-            onTap: (int index) {
-              tabController.animateTo(index);
-            },
-            currentIndex: _index,
-            items: bottomNavigationBarItemList
-                .map(
-                  (e) => BottomNavigationBarItem(
-                    label: e['label'],
-                    icon: Column(
-                      children: [
-                        SvgPicture.asset(
-                          e['iconPath']!,
-                          colorFilter: const ColorFilter.mode(
-                            greyACACAC,
-                            BlendMode.srcIn,
+            child: BottomNavigationBar(
+              elevation: 0,
+              backgroundColor: commonWhiteColor,
+              selectedItemColor: primaryColor,
+              unselectedItemColor: greyACACAC,
+              selectedFontSize: 11,
+              selectedLabelStyle: const TextStyle(
+                fontWeight: FontWeight.w500,
+                letterSpacing: -0.2,
+              ),
+              unselectedFontSize: 11,
+              type: BottomNavigationBarType.fixed,
+              onTap: (int index) {
+                tabController.animateTo(index);
+              },
+              currentIndex: _index,
+              items: bottomNavigationBarItemList
+                  .map(
+                    (e) => BottomNavigationBarItem(
+                      label: e['label'],
+                      icon: Column(
+                        children: [
+                          SvgPicture.asset(
+                            e['iconPath']!,
+                            colorFilter: const ColorFilter.mode(
+                              greyACACAC,
+                              BlendMode.srcIn,
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 6.0),
-                      ],
-                    ),
-                    activeIcon: Column(
-                      children: [
-                        SvgPicture.asset(
-                          e['iconPath']!,
-                          colorFilter: const ColorFilter.mode(
-                            primaryColor,
-                            BlendMode.srcIn,
+                          const SizedBox(height: 6.0),
+                        ],
+                      ),
+                      activeIcon: Column(
+                        children: [
+                          SvgPicture.asset(
+                            e['iconPath']!,
+                            colorFilter: const ColorFilter.mode(
+                              primaryColor,
+                              BlendMode.srcIn,
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 6.0),
-                      ],
+                          const SizedBox(height: 6.0),
+                        ],
+                      ),
                     ),
-                  ),
-                )
-                .toList(),
+                  )
+                  .toList(),
+            ),
           ),
         ),
       ),

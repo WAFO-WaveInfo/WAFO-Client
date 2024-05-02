@@ -6,7 +6,7 @@ import 'package:wafo/ui/common/layout/default_layout.dart';
 const List<Map<String, dynamic>> homeData = [
   {
     "imageUrl":
-        "https://lh3.googleusercontent.com/proxy/9KUDhKk_LTf4U_rw5eydAChEXJvEw9VkdfX6S3i0ddcKifO_51q518wCX05W6raytLCvG28gS3TkDFyvNd7MMFJj4Z4h5UNo6ckSnbhYtNCB3Vlb",
+        "https://www.unicef.or.kr/campaign/results/2022/assets/images/UN0803447.jpg",
     "folder": "구호",
     "title": "유니세프",
     "url": "www.unicef.or.kr",
@@ -175,11 +175,18 @@ class _HomeState extends State<HomeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SvgPicture.asset('assets/svg/setting.svg'),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('assets/svg/setting.svg'),
+                            style: ButtonStyle(
+                              overlayColor:
+                                  MaterialStateProperty.all(Colors.transparent),
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 56.0),
+                    const SizedBox(height: 30.0),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 24.0),
                       child: Column(
@@ -198,8 +205,9 @@ class _HomeState extends State<HomeScreen> {
                               ),
                               hintText: '저장할 링크를 넣어주세요.',
                               hintStyle: const TextStyle(
+                                color: grey848484,
                                 fontSize: 14.0,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w600,
                               ),
                               filled: true,
                               fillColor: commonWhiteColor,
@@ -226,6 +234,10 @@ class _HomeState extends State<HomeScreen> {
                                   });
                                 },
                                 icon: SvgPicture.asset('assets/svg/search.svg'),
+                                style: ButtonStyle(
+                                  overlayColor: MaterialStateProperty.all(
+                                      Colors.transparent),
+                                ),
                               ),
                             ),
                           ),
@@ -241,7 +253,7 @@ class _HomeState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                "최근 URL",
+                                "신규 URL",
                                 style: TextStyle(fontWeight: FontWeight.w700),
                               ),
                               Row(
@@ -348,7 +360,7 @@ class _HomeState extends State<HomeScreen> {
                                                   children: [
                                                     SvgPicture.asset(
                                                         'assets/svg/folderSmall.svg'),
-                                                    const SizedBox(width: 8.0),
+                                                    const SizedBox(width: 6.0),
                                                     Text(
                                                       data['folder']!,
                                                       style: const TextStyle(
@@ -427,6 +439,7 @@ class _HomeState extends State<HomeScreen> {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 20.0),
                   ],
                 ),
               ),

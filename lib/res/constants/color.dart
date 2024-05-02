@@ -26,6 +26,7 @@ const Color greyA1A1A1 = Color(0xFFA1A1A1);
 const Color grey999999 = Color(0xFF999999);
 const Color grey989898 = Color(0xFF989898);
 const Color grey8D8D8D = Color(0xFF8D8D8D);
+const Color grey848484 = Color(0xFF848484);
 const Color grey777777 = Color(0xFF777777);
 const Color grey555555 = Color(0xFF555555);
 const Color grey262626 = Color(0xFF262626);
