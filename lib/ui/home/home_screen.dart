@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wafo/res/constants/color.dart';
 import 'package:wafo/ui/common/layout/default_layout.dart';
+import 'package:wafo/utills/navigate.dart';
 
 List<Map<String, dynamic>> homeData = [
   {
@@ -176,7 +177,9 @@ class _HomeState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              navigateToSettingScreen(context);
+                            },
                             icon: SvgPicture.asset('assets/svg/setting.svg'),
                             style: ButtonStyle(
                               overlayColor:
@@ -368,6 +371,7 @@ class _HomeState extends State<HomeScreen> {
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.w700,
+                                                        letterSpacing: -0.5,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -385,6 +389,7 @@ class _HomeState extends State<HomeScreen> {
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w700,
+                                                        letterSpacing: -0.5,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -396,6 +401,7 @@ class _HomeState extends State<HomeScreen> {
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        letterSpacing: -0.5,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -409,6 +415,7 @@ class _HomeState extends State<HomeScreen> {
                                                     color: grey989898,
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.w500,
+                                                    letterSpacing: -0.5,
                                                   ),
                                                 ),
                                               ],
