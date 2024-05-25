@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wafo/res/constants/color.dart';
 import 'package:wafo/ui/common/layout/default_layout.dart';
 
-const List<Map<String, dynamic>> homeData = [
+List<Map<String, dynamic>> homeData = [
   {
     "imageUrl":
         "https://www.unicef.or.kr/campaign/results/2022/assets/images/UN0803447.jpg",
@@ -149,7 +149,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
-  final TextEditingController _wafoSearchController = TextEditingController();
+  final TextEditingController _saveLinkController = TextEditingController();
 
   late int index = 1;
 
@@ -195,7 +195,7 @@ class _HomeState extends State<HomeScreen> {
                           const SizedBox(height: 32.0),
                           TextField(
                             textInputAction: TextInputAction.search,
-                            controller: _wafoSearchController,
+                            controller: _saveLinkController,
                             cursorColor: primaryColor,
                             onChanged: (value) {},
                             decoration: InputDecoration(
@@ -230,7 +230,7 @@ class _HomeState extends State<HomeScreen> {
                                 padding: const EdgeInsets.only(right: 10.0),
                                 onPressed: () {
                                   setState(() {
-                                    _wafoSearchController.text = '';
+                                    _saveLinkController.text = '';
                                   });
                                 },
                                 icon: SvgPicture.asset('assets/svg/search.svg'),

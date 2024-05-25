@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // Common Color
 const Color primaryColor = Color(0xFF00BCFF);
+const Color primary2Color = Color(0xFF54B8F8);
 const Color commonWhiteColor = Color(0xFFFFFFFF);
 const Color commonBlackColor = Color(0xFF000000);
 const Color commonLessBlackColor = Color(0xFF313333);
@@ -18,6 +19,7 @@ const Color greyF1F2F5 = Color(0xFFF1F2F5);
 const Color greyF2F2F2 = Color(0xFFF2F2F2);
 const Color greyF4F4F4 = Color(0xFFF4F4F4);
 const Color greyF7F7F7 = Color(0xFFF7F7F7);
+const Color greyE5E5E5 = Color(0xFFE5E5E5);
 const Color greyC9C9C9 = Color(0xFFC9C9C9);
 const Color greyDDDDDD = Color(0xFFDDDDDD);
 const Color greyBCBCBC = Color(0xFFBCBCBC);
@@ -29,5 +31,6 @@ const Color grey8D8D8D = Color(0xFF8D8D8D);
 const Color grey848484 = Color(0xFF848484);
 const Color grey777777 = Color(0xFF777777);
 const Color grey555555 = Color(0xFF555555);
+const Color grey333333 = Color(0xFF333333);
 const Color grey262626 = Color(0xFF262626);
 const Color grey151816 = Color(0xFF151816);
